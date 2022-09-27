@@ -23,4 +23,4 @@ import math
 res = round(math.sqrt((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1)), 2)
 res = int(res * 100)
 res = float(res / 100)
-print(f'Расстояние между точками равно: {res}')
+print(f'Расстояние между точками равно: {res}.')
