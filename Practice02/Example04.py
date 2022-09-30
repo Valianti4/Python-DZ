@@ -11,14 +11,14 @@ print('Введите целое число.')
 n = int(input())
 list = [str(i) for i in range(-n, n + 1)]
 print(f'Последовательность: {list}')
-list2 = []
+res = []
 for i in range(-n, n + 1):
-    list2.append(randint(-n, n))
+    res.append(randint(-n, n))
 file = open('Python_Example04.txt', 'w')
-for i in list2:
+for i in res:
     file.write(str(i) + '\n')
 file.close()
 with open('Python_Example04.txt', "r") as file:
     for line in file:
         print(line.strip())
-print(f'Произведение выбранных элементов списка: {list2[0] * list2[1] * list2[2]}.')
+print(f'Произведение выбранных элементов списка: {res[0] * res[1] * res[2]}.')
