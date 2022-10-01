@@ -5,5 +5,20 @@
 [2, 3, 4, 5, 6] => [12, 15, 16];
 [2, 3, 5, 6] => [12, 15]
 '''
+from random import randint
 
+print('Чтобы задать список от 1 до определённого целого числа, введите это число.')
+num = int(input())
 
+def Mult_palindroms(list):
+    list = []
+    for i in range(num):
+        list.append(randint(0, num))
+    print(f'Начальный список: {list}')
+
+    list2 = []
+    for i in range((len(list) + 1) // 2):
+        list2.append(list[i] * list[len(list) -1 - i])   
+    print(f'Список произведения палиндромов: {list2}')
+
+Mult_palindroms(list)
