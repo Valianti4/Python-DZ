@@ -10,7 +10,7 @@ from random import randint
 print('Чтобы задать список от 1 до определённого целого числа, введите это число.')
 num = int(input())
 
-def Mult_palindroms(list):
+def Mult_couples(list):
     list = []
     for i in range(num):
         list.append(randint(0, num))
@@ -19,6 +19,6 @@ def Mult_palindroms(list):
     list2 = []
     for i in range((len(list) + 1) // 2):
         list2.append(list[i] * list[len(list) -1 - i])   
-    print(f'Список произведения палиндромов: {list2}')
+    print(f'Список произведения числовых пар списка: {list2}')
 
-Mult_palindroms(list)
+Mult_couples(list)
