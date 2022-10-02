@@ -7,3 +7,16 @@
 '''
 
 
+print('Чтобы преобразовать десятичное число в двоичное, введите целое число больше 0.')
+num = int(input())
+
+def Transform_in_bits(num):
+    res = ''
+    if num > 0:
+        while num != 0:
+            res = str(num % 2) + res
+            num //= 2
+        print(f'Двоичное число: {res}.')
+    else: print('Вы ввели неверное число. Пожалуйста, введите целое число больше 0.')
+    
+Transform_in_bits(num)
