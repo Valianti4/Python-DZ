@@ -11,12 +11,14 @@ import random
 print('Для того, чтобы узнать разницу между максимальным и минимальным значением дробной части элементов списка, состоящего из вещественных чисел, для задания размера списка введите целое число.')
 num = int(input())
 
-def Float_dif(list):
+def Create_list(list):
     list = []
     for i in range(num):
         list.append(round(random.uniform(0, num), 2))
     print(f'Cписок: {list}')
+    return list
 
+def Float_dif(list):
     min = 1
     max = 0
     for i in list:
@@ -27,4 +29,5 @@ def Float_dif(list):
     dif = round((max - min), 2)
     print(f'Разница между максимальным и минимальным значением дробной части элементов списка равна {dif}.')
 
+list = Create_list(list)
 Float_dif(list)
