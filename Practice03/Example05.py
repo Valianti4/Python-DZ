@@ -10,7 +10,7 @@
 print('Чтобы составить список чисел Фибоначчи для числа в диапазоне от -k до k, введите целое число больше 0.')
 k = int(input())
 
-def Create_fibonacci(k):    
+def create_fibonacci(k):    
     list_fibo = []
     a, b = 1, 1
     for i in range(k - 1):
@@ -22,5 +22,5 @@ def Create_fibonacci(k):
         a, b = b, a - b             
     return list_fibo   
 
-print(f'Список чисел Фибоначчи: {Create_fibonacci(k + 1)}')
-list_fibo = Create_fibonacci(k)
+print(f'Список чисел Фибоначчи: {create_fibonacci(k + 1)}')
+list_fibo = create_fibonacci(k)
