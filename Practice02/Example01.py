@@ -9,10 +9,14 @@
 
 print('Чтобы узнать сумму цифр числа, введите это число.')
 num = input()
-sum = 0
-num = num.replace(',', '.')
-num = num.replace('-', '')
-for i in str(num):
-    if i != '.': 
-        sum += int(i)
-print(f'Сумма цифр равна {sum}.')
+
+def sum_digit(num):
+    sum = 0
+    num = num.replace(',', '.')
+    num = num.replace('-', '')
+    for i in str(num):
+        if i != '.': 
+            sum += int(i)
+    print(f'Сумма цифр равна {sum}.')
+
+sum_digit(num)

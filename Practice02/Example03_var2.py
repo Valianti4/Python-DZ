@@ -8,6 +8,12 @@
 
 print('Чтобы увидеть список из n чисел последовательности (1 + 1 / n) ^ n и их сумму, введите это число')
 n = int(input())
-list = [round((1 + 1 / i)** i, 3) for i in range(1, n + 1)]
-print(f'Последовательность: {list}')
-print(f'Сумма последовательности чисел: {round(sum(list), 3)}.')
+
+def sum_list(list):
+    list = []
+    for i in range(1, n + 1):
+        list.append(round((1 + 1 / i)** i, 3))
+    print(f'Последовательность: {list}')
+    print(f'Сумма последовательности чисел: {round(sum(list), 3)}.')
+
+list = sum_list(list)
