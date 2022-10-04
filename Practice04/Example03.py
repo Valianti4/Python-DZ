@@ -6,7 +6,7 @@
 
 from random import randint
 
-print('Чтобы задать список, введите число.')
+print('Чтобы задать список, введите число:')
 num = int(input())
 
 def create_list(list):
