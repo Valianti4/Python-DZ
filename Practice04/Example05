@@ -1,0 +1,16 @@
+'''
+Задача 5. Даны два файла, в каждом из которых находится запись многочлена. 
+Задача - сформировать файл, содержащий сумму многочленов.
+'''
+
+
+with open('sum_equations.txt', 'a') as file:
+    str_1 = open('poly.txt', 'r').readlines()
+    str_2 = open('poly_2.txt', 'r').readlines()
+    if len(str_1) != len(str_2):
+        print('Содержимое файлов не совпадает')
+    else:
+        for i in range(len(str_1)):
+            s1 = str_1[i].replace(' = 0\n', '')
+            s2 = str_2[i].replace(' = 0\n', '')
+            file.write(f"{s1} + {s2} = 0\n")
